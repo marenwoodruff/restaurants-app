@@ -1,0 +1,17 @@
+{
+  "development": {
+    "database": "yum-app-development",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "database": "yum-app-test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "database": "yum-app-production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
