@@ -424,9 +424,9 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
-    return queryInterface.bulkInsert('restaurants', [
+    return queryInterface.bulkInsert('menus', [
       {
-        name: 'Brunch',
+        name: 'brunch',
         days: 'Saturday + Sunday',
         hours: '11:00-3:00',
         restaurantId: 1,
@@ -434,7 +434,7 @@ module.exports = {
         updatedAt: Sequelize.literal('NOW()')
       },
       {
-        name: 'Brunch',
+        name: 'brunch',
         days: 'Saturday + Sunday',
         hours: '11:00-3:00',
         restaurantId: 2,
@@ -452,7 +452,7 @@ module.exports = {
       Example:
       return queryInterface.bulkDelete('Person', null, {});
     */
-    return queryInterface.bulkDelete('restaurants', null, {});
+    return queryInterface.bulkDelete('menus', null, {});
   }
 };
 ```
@@ -464,7 +464,7 @@ module.exports = {
   - \c yum-app-development
   - \dt
   - \d restaurants
-  - SELECT * FROM restaurants;
+  - SELECT * FROM menus;
 
 ### Create a menus_controller.js
 
