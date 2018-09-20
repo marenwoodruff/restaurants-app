@@ -34,6 +34,7 @@ App created with express generator + sequelize
 
 - `sequelize seed:generate --name restaurant-seeds`
 - add seeds for 2 restaurants
+
 ```
 module.exports = {
   up: (queryInterface, Sequelize) => {
@@ -85,6 +86,7 @@ module.exports = {
   }
 };
 ```
+
 - `sequelize db:seed:all`
 - check your database
   - psql
@@ -132,9 +134,9 @@ router.get('/', (req, res) => {
 - Create a `layout.ejs` file, and add in boilerplate html
 - Dry up the `index.ejs` file
 
-### Create index view
+### Create an index view
 
-- Update controller route
+- Update the controller route
 
 ```
 router.get('/', (req, res) => {
@@ -310,7 +312,9 @@ router.get('/:id/edit', (req, res) => {
 });
 ```
 
-### Create an views/restaurants/edit.ejs
+### Create an edit view
+
+- Touch a `views/restaurants/edit.ejs`
 
 ```
 <h1>edit <%= restaurant.name %> restaurant</h1>
@@ -451,6 +455,7 @@ module.exports = {
     return queryInterface.bulkDelete('restaurants', null, {});
   }
 };
+```
 
 - run `sequelize db:seed:all`
 - check your database
@@ -572,6 +577,8 @@ router.get('/:restaurantId/menus/new', (req, res) => {
 
 ### Create a new menu view
 
+- Touch a `views/menus/new.ejs`
+
 ```
 <h1>add a new menu for <%= restaurant.name %></h1>
 
@@ -631,6 +638,8 @@ router.get('/:restaurantId/menus/:id/edit', (req, res) => {
 ```
 
 ### Create an edit view
+
+- `touch views/menus/edit.ejs`
 
 ```
 <h1>update <%= menu.name %></h1>
